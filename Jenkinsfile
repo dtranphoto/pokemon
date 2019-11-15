@@ -10,7 +10,7 @@ node ('master') {
         checkout scm
         echo "Checkout Source files"
      }
-    state('Test'){
+    stage('Test'){
         echo "Run Robotframework Tests"
         try {
             sh " /var/lib/jenkins/workspace/robot -d Results Tests/Pokemon.robot"
