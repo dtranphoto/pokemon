@@ -6,6 +6,6 @@ node ('master') {
       //  sh "sudo pip install robotframework"
       //  sh "sudo pip install robotframework-selenium2library"
         sh "pwd"
-        sh " /var/lib/jenkins/workspace/robot -d Results Tests/Front_Office.robot"
+        sh " /var/lib/jenkins/workspace/robot -d Results Tests/Pokemon.robot"
     }
 }
