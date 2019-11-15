@@ -1,88 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.8.0 on win32)" generated="20191114 21:09:07.343" rpa="false">
-<suite id="s1" name="Front Office" source="C:\development\pokemon\pokemon\Tests\Front_Office.robot">
-<test id="s1-t1" name="Should be able to access &quot;Team&quot; page">
-<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<robot generator="Robot 3.1.2 (Python 3.8.0 on win32)" generated="20191115 08:28:27.145" rpa="false">
+<suite id="s1" name="Pokemon" source="C:\development\pokemon\pokemon\Tests\Pokemon.robot">
+<test id="s1-t1" name="Web GUI Test Click Main Buttons">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
-<arg>about:blank</arg>
-<arg>${BROWSER} remote_url=https://dtranphoto:bd4e1021-fbf7-42cc-8520-f049d3779343@ondemand.saucelabs.com:443/wd/hub</arg>
-<arg>desired_capabilities=name:Win 10 + Chrome 70,platform:Windows 10,browserName:chrome,version:70.0</arg>
+<arg>${START_URL}</arg>
+<arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20191114 21:09:07.490" level="INFO">Opening browser 'chrome remote_url=https://dtranphoto:bd4e1021-fbf7-42cc-8520-f049d3779343@ondemand.saucelabs.com:443/wd/hub' to base url 'about:blank'.</msg>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20191114 21:09:07.490" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<status status="PASS" starttime="20191114 21:09:07.490" endtime="20191114 21:09:07.490"></status>
+<msg timestamp="20191115 08:28:27.286" level="INFO">Opening browser 'chrome' to base url 'https://www.pokemon.com/us/'.</msg>
+<status status="PASS" starttime="20191115 08:28:27.286" endtime="20191115 08:28:35.298"></status>
 </kw>
-<msg timestamp="20191114 21:09:07.492" level="FAIL">ValueError: chromeremote_url=https://dtranphoto:bd4e1021-fbf7-42cc-8520-f049d3779343@ondemand.saucelabs.com:443/wd/hub is not a supported browser.</msg>
-<status status="FAIL" starttime="20191114 21:09:07.490" endtime="20191114 21:09:07.492"></status>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Home</arg>
+</arguments>
+<status status="PASS" starttime="20191115 08:28:35.298" endtime="20191115 08:28:35.327"></status>
 </kw>
-<status status="FAIL" starttime="20191114 21:09:07.490" endtime="20191114 21:09:07.492"></status>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>/us/pokedex/</arg>
+</arguments>
+<msg timestamp="20191115 08:28:35.328" level="INFO">Clicking link '/us/pokedex/'.</msg>
+<status status="PASS" starttime="20191115 08:28:35.328" endtime="20191115 08:28:35.822"></status>
 </kw>
-<kw name="End Web Test" library="CommonWeb" type="teardown">
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20191114 21:09:07.492" endtime="20191114 21:09:07.492"></status>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Name or Number</arg>
+</arguments>
+<status status="PASS" starttime="20191115 08:28:35.822" endtime="20191115 08:28:35.862"></status>
 </kw>
-<status status="PASS" starttime="20191114 21:09:07.492" endtime="20191114 21:09:07.492"></status>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>/us/pokemon-video-games/</arg>
+</arguments>
+<msg timestamp="20191115 08:28:35.863" level="INFO">Clicking link '/us/pokemon-video-games/'.</msg>
+<status status="PASS" starttime="20191115 08:28:35.863" endtime="20191115 08:28:36.231"></status>
 </kw>
-<doc>This is test 1</doc>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Video Games &amp; Apps</arg>
+</arguments>
+<status status="PASS" starttime="20191115 08:28:36.232" endtime="20191115 08:28:36.258"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>/us/pokemon-tcg/</arg>
+</arguments>
+<msg timestamp="20191115 08:28:36.259" level="INFO">Clicking link '/us/pokemon-tcg/'.</msg>
+<status status="PASS" starttime="20191115 08:28:36.259" endtime="20191115 08:28:36.608"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Pokémon TCG</arg>
+</arguments>
+<status status="PASS" starttime="20191115 08:28:36.609" endtime="20191115 08:28:36.633"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>/us/pokemon-episodes/</arg>
+</arguments>
+<msg timestamp="20191115 08:28:36.633" level="INFO">Clicking link '/us/pokemon-episodes/'.</msg>
+<status status="PASS" starttime="20191115 08:28:36.633" endtime="20191115 08:28:37.341"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Pokémon TV</arg>
+</arguments>
+<status status="PASS" starttime="20191115 08:28:37.341" endtime="20191115 08:28:37.353"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>/us/play-pokemon/</arg>
+</arguments>
+<msg timestamp="20191115 08:28:37.353" level="INFO">Clicking link '/us/play-pokemon/'.</msg>
+<status status="PASS" starttime="20191115 08:28:37.353" endtime="20191115 08:28:37.889"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Play! Pokémon Events</arg>
+</arguments>
+<status status="PASS" starttime="20191115 08:28:37.889" endtime="20191115 08:28:37.910"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>/us/pokemon-news/</arg>
+</arguments>
+<msg timestamp="20191115 08:28:37.910" level="INFO">Clicking link '/us/pokemon-news/'.</msg>
+<status status="PASS" starttime="20191115 08:28:37.910" endtime="20191115 08:28:38.136"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Pokémon News</arg>
+</arguments>
+<status status="PASS" starttime="20191115 08:28:38.137" endtime="20191115 08:28:38.161"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20191115 08:28:38.162" endtime="20191115 08:28:40.246"></status>
+</kw>
+<doc>A simple Pokemon.com test</doc>
 <tags>
-<tag>test1</tag>
+<tag>Smoke</tag>
 </tags>
-<status status="FAIL" starttime="20191114 21:09:07.489" endtime="20191114 21:09:07.492" critical="yes">Setup failed:
-ValueError: chromeremote_url=https://dtranphoto:bd4e1021-fbf7-42cc-8520-f049d3779343@ondemand.saucelabs.com:443/wd/hub is not a supported browser.</status>
+<status status="PASS" starttime="20191115 08:28:27.285" endtime="20191115 08:28:40.246" critical="yes"></status>
 </test>
-<test id="s1-t2" name="&quot;Team&quot; page should match requirements">
-<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<test id="s1-t2" name="Web GUI Test Search Pokedex">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
-<arg>about:blank</arg>
-<arg>${BROWSER} remote_url=https://dtranphoto:bd4e1021-fbf7-42cc-8520-f049d3779343@ondemand.saucelabs.com:443/wd/hub</arg>
-<arg>desired_capabilities=name:Win 10 + Chrome 70,platform:Windows 10,browserName:chrome,version:70.0</arg>
+<arg>${START_URL}</arg>
+<arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20191114 21:09:07.494" level="INFO">Opening browser 'chrome remote_url=https://dtranphoto:bd4e1021-fbf7-42cc-8520-f049d3779343@ondemand.saucelabs.com:443/wd/hub' to base url 'about:blank'.</msg>
+<msg timestamp="20191115 08:28:40.248" level="INFO">Opening browser 'chrome' to base url 'https://www.pokemon.com/us/'.</msg>
+<status status="PASS" starttime="20191115 08:28:40.248" endtime="20191115 08:28:48.255"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Home</arg>
+</arguments>
+<status status="PASS" starttime="20191115 08:28:48.255" endtime="20191115 08:28:48.294"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>/us/pokedex/</arg>
+</arguments>
+<msg timestamp="20191115 08:28:48.294" level="INFO">Clicking link '/us/pokedex/'.</msg>
+<status status="PASS" starttime="20191115 08:28:48.294" endtime="20191115 08:28:48.717"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Name or Number</arg>
+</arguments>
+<status status="PASS" starttime="20191115 08:28:48.718" endtime="20191115 08:28:48.729"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=searchInput</arg>
+<arg>Bulbasaur</arg>
+</arguments>
+<msg timestamp="20191115 08:28:48.729" level="INFO">Typing text 'Bulbasaur' into text field 'id=searchInput'.</msg>
+<status status="PASS" starttime="20191115 08:28:48.729" endtime="20191115 08:28:48.846"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Bulbasaur</arg>
+</arguments>
+<status status="PASS" starttime="20191115 08:28:48.846" endtime="20191115 08:28:48.855"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>/us/pokedex/bulbasaur</arg>
+</arguments>
+<msg timestamp="20191115 08:28:48.855" level="INFO">Clicking link '/us/pokedex/bulbasaur'.</msg>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20191114 21:09:07.494" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<status status="PASS" starttime="20191114 21:09:07.494" endtime="20191114 21:09:07.494"></status>
+<msg timestamp="20191115 08:28:49.382" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20191115 08:28:48.865" endtime="20191115 08:28:49.382"></status>
 </kw>
-<msg timestamp="20191114 21:09:07.495" level="FAIL">ValueError: chromeremote_url=https://dtranphoto:bd4e1021-fbf7-42cc-8520-f049d3779343@ondemand.saucelabs.com:443/wd/hub is not a supported browser.</msg>
-<status status="FAIL" starttime="20191114 21:09:07.494" endtime="20191114 21:09:07.495"></status>
+<msg timestamp="20191115 08:28:49.383" level="FAIL">Link with locator '/us/pokedex/bulbasaur' not found.</msg>
+<status status="FAIL" starttime="20191115 08:28:48.855" endtime="20191115 08:28:49.383"></status>
 </kw>
-<status status="FAIL" starttime="20191114 21:09:07.494" endtime="20191114 21:09:07.495"></status>
-</kw>
-<kw name="End Web Test" library="CommonWeb" type="teardown">
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20191114 21:09:07.495" endtime="20191114 21:09:07.495"></status>
-</kw>
-<status status="PASS" starttime="20191114 21:09:07.495" endtime="20191114 21:09:07.495"></status>
-</kw>
-<doc>This is test 2</doc>
+<doc>A simple Pokemon.com test</doc>
 <tags>
-<tag>test2</tag>
+<tag>Smoke</tag>
 </tags>
-<status status="FAIL" starttime="20191114 21:09:07.493" endtime="20191114 21:09:07.495" critical="yes">Setup failed:
-ValueError: chromeremote_url=https://dtranphoto:bd4e1021-fbf7-42cc-8520-f049d3779343@ondemand.saucelabs.com:443/wd/hub is not a supported browser.</status>
+<status status="FAIL" starttime="20191115 08:28:40.247" endtime="20191115 08:28:49.384" critical="yes">Link with locator '/us/pokedex/bulbasaur' not found.</status>
 </test>
-<doc>Talk about what this suite of tests does</doc>
-<status status="FAIL" starttime="20191114 21:09:07.344" endtime="20191114 21:09:07.496"></status>
+<doc>A simple Amazon.com suite</doc>
+<status status="FAIL" starttime="20191115 08:28:27.146" endtime="20191115 08:28:49.385"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="2">Critical Tests</stat>
-<stat pass="0" fail="2">All Tests</stat>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1">test1</stat>
-<stat pass="0" fail="1">test2</stat>
+<stat pass="1" fail="1">Smoke</stat>
 </tag>
 <suite>
-<stat pass="0" fail="2" id="s1" name="Front Office">Front Office</stat>
+<stat pass="1" fail="1" id="s1" name="Pokemon">Pokemon</stat>
 </suite>
 </statistics>
 <errors>

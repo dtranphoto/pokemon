@@ -7,27 +7,52 @@ Library  SeleniumLibrary
 ${BROWSER} =  chrome
 ${START_URL} =  https://www.pokemon.com/us/
 #${START_URL} =  https://www.google.com/
-${START_URL} =  https://www.amazon.com/
+#${START_URL} =  https://www.amazon.com/
 
 # Use this terminal command to RUN
 # robot -d results tests/amazon.robot
 
 *** Test Cases ***
-Simple Web GUI Test
+Web GUI Test Click Main Buttons
     [Documentation]  A simple Pokemon.com test
     [Tags]  Smoke
-    #Open Browser  ${START_URL}  ${BROWSER}
+#    Open Browser  ${START_URL}  ${BROWSER}
     Open Browser  ${START_URL}  ${BROWSER}  remote_url=https://dtranphoto:bd4e1021-fbf7-42cc-8520-f049d3779343@ondemand.saucelabs.com:443/wd/hub  desired_capabilities=name:Win 10 + Chrome 70,platform:Windows 10,browserName:chrome,version:70.0
     #Open Browser  ${START_URL}  ${BROWSER}  remote_url=http://YOUR-SAUCE-USERNAME:YOUR-SAUCE-KEY@ondemand.saucelabs.com:80/wd/hub  desired_capabilities=name:Win 10 + IE 11,platform:Windows 10,browserName:internet explorer,version:11.285
+    Wait Until Page Contains    Home
+    Click Link  /us/pokedex/
+    Wait Until Page Contains    Name or Number
+    sleep    2s
+    Click Link  /us/pokemon-video-games/
+    Wait Until Page Contains    Video Games & Apps
+    sleep    2s
+    Click Link  /us/pokemon-tcg/
+    Wait Until Page Contains    Pokémon TCG
+    sleep    2s
+    Click Link  /us/pokemon-episodes/
+    Wait Until Page Contains    Pokémon TV
+    sleep    2s
+    Click Link  /us/play-pokemon/
+    Wait Until Page Contains    Play! Pokémon Events
+    sleep    2s
+    Click Link  /us/pokemon-news/
+    Wait Until Page Contains    Pokémon News
+    sleep    2s
+
+    Close Browser
+
+Web GUI Test Search Pokedex
+    [Documentation]  A simple Pokemon.com test
+    [Tags]  Smoke
+#    Open Browser  ${START_URL}  ${BROWSER}
+    Open Browser  ${START_URL}  ${BROWSER}  remote_url=https://dtranphoto:bd4e1021-fbf7-42cc-8520-f049d3779343@ondemand.saucelabs.com:443/wd/hub  desired_capabilities=name:Win 10 + Chrome 70,platform:Windows 10,browserName:chrome,version:70.0
     Wait Until Page Contains    Home
     Click Link   /us/pokedex/
     Wait Until Page Contains    Name or Number
     Input Text   id=searchInput  Bulbasaur
     Wait Until Page Contains    Bulbasaur
-#    Click Link   /us/pokedex/bulbasaur
+    Click Link   /us/pokedex/bulbasaur
     sleep    5s
-
     #Wait Until Page Contains  results for
     Close Browser
-
 *** Keywords ***

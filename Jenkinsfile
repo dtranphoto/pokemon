@@ -19,7 +19,6 @@ node ('master') {
             testfailed = 1
         }
         finally{
-            //junit '*.xml'
             robot outputPath: 'Results', passThreshold: 95.0, unstableThreshold:75.0
         }
 
