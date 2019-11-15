@@ -20,7 +20,7 @@ node ('master') {
         }
         finally{
             //junit '*.xml'
-            robot outputPath: 'Results/*.xml', passThreshold: 95.0, unstableThreshold:75.0
+            robot outputPath: 'Results', passThreshold: 95.0, unstableThreshold:75.0
         }
 
     }
