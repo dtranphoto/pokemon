@@ -1,11 +1,32 @@
+
+testfailed = 0
+def notify_failed(){
+ emailext body: '''Check console output at "${env.BUILD_URL"}
+''', subject: 'FAILED: JOB \'${env.JOB_NAME} ', to: 'dtranphoto101@gmail.com'
+}
+
 node ('master') {
     stage('Checkout'){
         checkout scm
-        echo "Calling Robot Job"
-       /// sh "sudo yum install python-pip"
-      //  sh "sudo pip install robotframework"
-      //  sh "sudo pip install robotframework-selenium2library"
-        sh "pwd"
-        sh " /var/lib/jenkins/workspace/robot -d Results Tests/Pokemon.robot"
+        echo "Checkout Source files"
+     }
+    state('Test'){
+        echo "Run Robotframework Tests"
+        try {
+            sh " /var/lib/jenkins/workspace/robot -d Results Tests/Pokemon.robot"
+        }
+        catch (Exception e) {
+            testfailed = 1
+        }
+        finally{
+            junit '*.xml'
+        }
+
+    }
+    stage('Report'){
+        echo "Email if test Failed"
+        if(testfailed){
+            notify_failed()
+        }
     }
 }
