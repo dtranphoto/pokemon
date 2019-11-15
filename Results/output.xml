@@ -1,202 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.8.0 on win32)" generated="20191115 10:18:52.074" rpa="false">
+<robot generator="Robot 3.1.2 (Python 3.8.0 on win32)" generated="20191115 10:33:49.047" rpa="false">
 <suite id="s1" name="Pokemon" source="C:\development\pokemon\pokemon\Tests\Pokemon.robot">
-<test id="s1-t1" name="Web GUI Test Click Main Buttons">
+<test id="s1-t1" name="Web GUI Test Search Pokedex for Eevee">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
 <arg>${START_URL}</arg>
 <arg>${BROWSER}</arg>
+<arg>remote_url=https://dtranphoto:bd4e1021-fbf7-42cc-8520-f049d3779343@ondemand.saucelabs.com:443/wd/hub</arg>
+<arg>desired_capabilities=name:Win 10 + Chrome 70,platform:Windows 10,browserName:chrome,version:70.0</arg>
 </arguments>
-<msg timestamp="20191115 10:18:52.214" level="INFO">Opening browser 'chrome' to base url 'https://www.pokemon.com/us/'.</msg>
-<status status="PASS" starttime="20191115 10:18:52.214" endtime="20191115 10:19:00.259"></status>
+<msg timestamp="20191115 10:33:49.187" level="INFO">Opening browser 'chrome' to base url 'https://www.pokemon.com/us/' through remote server at 'https://dtranphoto:bd4e1021-fbf7-42cc-8520-f049d3779343@ondemand.saucelabs.com:443/wd/hub'.</msg>
+<status status="PASS" starttime="20191115 10:33:49.187" endtime="20191115 10:33:58.676"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>Home</arg>
 </arguments>
-<status status="PASS" starttime="20191115 10:19:00.259" endtime="20191115 10:19:00.282"></status>
+<status status="PASS" starttime="20191115 10:33:58.676" endtime="20191115 10:33:59.420"></status>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>/us/pokedex/</arg>
 </arguments>
-<msg timestamp="20191115 10:19:00.282" level="INFO">Clicking link '/us/pokedex/'.</msg>
-<status status="PASS" starttime="20191115 10:19:00.282" endtime="20191115 10:19:00.679"></status>
+<msg timestamp="20191115 10:33:59.421" level="INFO">Clicking link '/us/pokedex/'.</msg>
+<status status="PASS" starttime="20191115 10:33:59.421" endtime="20191115 10:34:01.527"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>Name or Number</arg>
 </arguments>
-<status status="PASS" starttime="20191115 10:19:00.680" endtime="20191115 10:19:00.691"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2s</arg>
-</arguments>
-<msg timestamp="20191115 10:19:02.693" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20191115 10:19:00.691" endtime="20191115 10:19:02.693"></status>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>/us/pokemon-video-games/</arg>
-</arguments>
-<msg timestamp="20191115 10:19:02.693" level="INFO">Clicking link '/us/pokemon-video-games/'.</msg>
-<status status="PASS" starttime="20191115 10:19:02.693" endtime="20191115 10:19:03.027"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Video Games &amp; Apps</arg>
-</arguments>
-<status status="PASS" starttime="20191115 10:19:03.027" endtime="20191115 10:19:03.052"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2s</arg>
-</arguments>
-<msg timestamp="20191115 10:19:05.054" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20191115 10:19:03.052" endtime="20191115 10:19:05.054"></status>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>/us/pokemon-tcg/</arg>
-</arguments>
-<msg timestamp="20191115 10:19:05.054" level="INFO">Clicking link '/us/pokemon-tcg/'.</msg>
-<status status="PASS" starttime="20191115 10:19:05.054" endtime="20191115 10:19:05.739"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Pokémon TCG</arg>
-</arguments>
-<status status="PASS" starttime="20191115 10:19:05.739" endtime="20191115 10:19:05.754"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2s</arg>
-</arguments>
-<msg timestamp="20191115 10:19:07.755" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20191115 10:19:05.754" endtime="20191115 10:19:07.755"></status>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>/us/pokemon-episodes/</arg>
-</arguments>
-<msg timestamp="20191115 10:19:07.756" level="INFO">Clicking link '/us/pokemon-episodes/'.</msg>
-<status status="PASS" starttime="20191115 10:19:07.756" endtime="20191115 10:19:08.368"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Pokémon TV</arg>
-</arguments>
-<status status="PASS" starttime="20191115 10:19:08.374" endtime="20191115 10:19:08.395"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2s</arg>
-</arguments>
-<msg timestamp="20191115 10:19:10.396" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20191115 10:19:08.395" endtime="20191115 10:19:10.396"></status>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>/us/play-pokemon/</arg>
-</arguments>
-<msg timestamp="20191115 10:19:10.397" level="INFO">Clicking link '/us/play-pokemon/'.</msg>
-<status status="PASS" starttime="20191115 10:19:10.396" endtime="20191115 10:19:10.853"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Play! Pokémon Events</arg>
-</arguments>
-<status status="PASS" starttime="20191115 10:19:10.853" endtime="20191115 10:19:10.873"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2s</arg>
-</arguments>
-<msg timestamp="20191115 10:19:12.874" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20191115 10:19:10.873" endtime="20191115 10:19:12.874"></status>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>/us/pokemon-news/</arg>
-</arguments>
-<msg timestamp="20191115 10:19:12.877" level="INFO">Clicking link '/us/pokemon-news/'.</msg>
-<status status="PASS" starttime="20191115 10:19:12.876" endtime="20191115 10:19:13.310"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Pokémon News</arg>
-</arguments>
-<status status="PASS" starttime="20191115 10:19:13.310" endtime="20191115 10:19:13.326"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2s</arg>
-</arguments>
-<msg timestamp="20191115 10:19:15.326" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20191115 10:19:13.326" endtime="20191115 10:19:15.326"></status>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20191115 10:19:15.326" endtime="20191115 10:19:17.411"></status>
-</kw>
-<doc>Pokemon.com test</doc>
-<tags>
-<tag>Smoke</tag>
-</tags>
-<status status="PASS" starttime="20191115 10:18:52.214" endtime="20191115 10:19:17.411" critical="yes"></status>
-</test>
-<test id="s1-t2" name="Web GUI Test Search Pokedex for Eevee">
-<kw name="Open Browser" library="SeleniumLibrary">
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<arguments>
-<arg>${START_URL}</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20191115 10:19:17.413" level="INFO">Opening browser 'chrome' to base url 'https://www.pokemon.com/us/'.</msg>
-<status status="PASS" starttime="20191115 10:19:17.412" endtime="20191115 10:19:25.473"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Home</arg>
-</arguments>
-<status status="PASS" starttime="20191115 10:19:25.473" endtime="20191115 10:19:25.513"></status>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>/us/pokedex/</arg>
-</arguments>
-<msg timestamp="20191115 10:19:25.514" level="INFO">Clicking link '/us/pokedex/'.</msg>
-<status status="PASS" starttime="20191115 10:19:25.513" endtime="20191115 10:19:26.214"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Name or Number</arg>
-</arguments>
-<status status="PASS" starttime="20191115 10:19:26.214" endtime="20191115 10:19:26.238"></status>
+<status status="PASS" starttime="20191115 10:34:01.528" endtime="20191115 10:34:01.835"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -204,63 +41,63 @@
 <arg>id=searchInput</arg>
 <arg>Eevee</arg>
 </arguments>
-<msg timestamp="20191115 10:19:26.239" level="INFO">Typing text 'Eevee' into text field 'id=searchInput'.</msg>
-<status status="PASS" starttime="20191115 10:19:26.238" endtime="20191115 10:19:26.302"></status>
+<msg timestamp="20191115 10:34:01.837" level="INFO">Typing text 'Eevee' into text field 'id=searchInput'.</msg>
+<status status="PASS" starttime="20191115 10:34:01.836" endtime="20191115 10:34:03.173"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20191115 10:19:28.305" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20191115 10:19:26.303" endtime="20191115 10:19:28.305"></status>
+<msg timestamp="20191115 10:34:05.176" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191115 10:34:03.175" endtime="20191115 10:34:05.176"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
 <arg>id=search</arg>
 </arguments>
-<msg timestamp="20191115 10:19:28.305" level="INFO">Clicking button 'id=search'.</msg>
-<status status="PASS" starttime="20191115 10:19:28.305" endtime="20191115 10:19:28.377"></status>
+<msg timestamp="20191115 10:34:05.176" level="INFO">Clicking button 'id=search'.</msg>
+<status status="PASS" starttime="20191115 10:34:05.176" endtime="20191115 10:34:06.423"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>133</arg>
 </arguments>
-<status status="PASS" starttime="20191115 10:19:28.377" endtime="20191115 10:19:28.388"></status>
+<status status="PASS" starttime="20191115 10:34:06.424" endtime="20191115 10:34:06.652"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20191115 10:19:30.389" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20191115 10:19:28.388" endtime="20191115 10:19:30.389"></status>
+<msg timestamp="20191115 10:34:08.656" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191115 10:34:06.654" endtime="20191115 10:34:08.656"></status>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20191115 10:19:30.389" endtime="20191115 10:19:32.465"></status>
+<status status="PASS" starttime="20191115 10:34:08.658" endtime="20191115 10:34:08.960"></status>
 </kw>
 <doc>A simple Pokemon.com test</doc>
 <tags>
 <tag>Smoke</tag>
 </tags>
-<status status="PASS" starttime="20191115 10:19:17.412" endtime="20191115 10:19:32.465" critical="yes"></status>
+<status status="PASS" starttime="20191115 10:33:49.186" endtime="20191115 10:34:08.960" critical="yes"></status>
 </test>
 <doc>A simple Pokemon.com suite</doc>
-<status status="PASS" starttime="20191115 10:18:52.075" endtime="20191115 10:19:32.466"></status>
+<status status="PASS" starttime="20191115 10:33:49.048" endtime="20191115 10:34:08.961"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0">Critical Tests</stat>
-<stat pass="2" fail="0">All Tests</stat>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="2" fail="0">Smoke</stat>
+<stat pass="1" fail="0">Smoke</stat>
 </tag>
 <suite>
-<stat pass="2" fail="0" id="s1" name="Pokemon">Pokemon</stat>
+<stat pass="1" fail="0" id="s1" name="Pokemon">Pokemon</stat>
 </suite>
 </statistics>
 <errors>

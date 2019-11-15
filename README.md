@@ -1,5 +1,7 @@
 # pokemon
 
+![Test Framework Architecture](Pokemon.png)
+
 
      sudo yum update
    sudo service jenkins start
