@@ -4,6 +4,7 @@ node ('master') {
         echo "Calling Robot Job"
         sh "pwd"
         sh "ls"
-        sh "robot -d Results Tests/Front_Office.robot"
+        sh "which robot"
+        sh "/usr/local/bin/robot -d Results Tests/Front_Office.robot"
     }
 }
