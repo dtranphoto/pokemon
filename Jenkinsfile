@@ -3,9 +3,8 @@ node ('master') {
         checkout scm
         echo "Calling Robot Job"
         sh "whoami"
-        sh "pwd"
-        sh "ls"
-        sh "export $PATH=/usr/local/bin:$PATH"
+        sh "pip install robotframework"
+        sh "pip install robotframework-selenium2library"
         sh "which robot"
         sh "robot -d Results Tests/Front_Office.robot"
     }
