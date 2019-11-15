@@ -2,7 +2,7 @@ node ('master') {
     stage('Checkout'){
         checkout scm
         echo "Calling Robot Job"
-        sh "whoami"
+        sh "yum install python-pip"
         sh "pip install robotframework"
         sh "pip install robotframework-selenium2library"
         sh "which robot"
