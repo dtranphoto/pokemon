@@ -24,9 +24,13 @@ node ('master') {
 
     }
     stage('Report'){
-        echo "Email if test Failed"
+        //Send Email if test fails"
         if(testfailed){
+            echo "Test Failed"
             notify_failed()
+        }
+        else{
+            echo "Test Passed"
         }
     }
 }
