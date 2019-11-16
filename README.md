@@ -1,17 +1,21 @@
 ## Pokemon UI Test Framework Architecture
 
+
 ![Test Framework Architecture](Pokemon.png)
+
 
 
 As a Potential Pokemon SDET, I would like to setup UI Automated testing for the Pokemon.com/us website using Jenkins, Robot Framework, Selenium WebDriver and SauceLabs.
 I will be using AWS to spin up a EC2 instance which will Run Jenkins. From Jenkins, I will have an automated nightly job that will call the Robot Framework to run all the UI Test on the Pokemon.com website.
 The UI tests will be executed and recorded via SauceLabs.
 
-# The Nightly Jenkins job can be found here.
+
+
+The Nightly Jenkins job can be found here.
 
 http://3.133.109.139:8080/
 
-# The SauceLabs Replay can be seen below.
+The SauceLabs Replay can be seen below.
 
 ![SauceLab_Replau](saucelab_replay.gif)
 
