@@ -20,22 +20,22 @@ Web GUI Test Click Main Buttons
     Wait Until Page Contains    Home
     Click Link  /us/pokedex/
     Wait Until Page Contains    Name or Number
-    sleep    2s
+    sleep    1s
     Click Link  /us/pokemon-video-games/
     Wait Until Page Contains    Video Games & Apps
-    sleep    2s
+    sleep    1s
     Click Link  /us/pokemon-tcg/
     Wait Until Page Contains    Pokémon TCG
-    sleep    2s
+    sleep    1s
     Click Link  /us/pokemon-episodes/
     Wait Until Page Contains    Pokémon TV
-    sleep    2s
+    sleep    1s
     Click Link  /us/play-pokemon/
     Wait Until Page Contains    Play! Pokémon Events
-    sleep    2s
+    sleep    1s
     Click Link  /us/pokemon-news/
     Wait Until Page Contains    Pokémon News
-    sleep    2s
+    sleep    1s
 
     Close Browser
 
@@ -48,10 +48,10 @@ Web GUI Test Search Pokedex for Eevee
     Click Link   /us/pokedex/
     Wait Until Page Contains    Name or Number
     Input Text   id=searchInput  Eevee
-    sleep    2s
+    sleep    1s
     Click Button    id=search
     Wait Until Page Contains    133
-    sleep   2s
+    sleep   3s
 
     Close Browser
 
