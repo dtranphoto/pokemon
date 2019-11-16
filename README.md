@@ -15,19 +15,25 @@ http://3.133.109.139:8080/
 
 ![SauceLab_Replau](saucelab_replay.gif)
 
-#Steps to install Jenkins on AWS EC2 Linux:
+Steps to install Jenkins on AWS EC2 Linux:
 
    `sudo yum update`
+
    `sudo yum remove java-1.7.0-openjdk`
+
    `sudo yum install java-1.8.0`
 
    `sudo rpm — import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key`
+
    `sudo yum install jenkins -y`
+
    `sudo service jenkins start`
 
-#Initial Jenkins Password can be found here.
+Initial Jenkins Password can be found here.
+
    `sudo vi /var/lib/jenkins/secrets/initialAdminPassword`
 
-#Install Git
+Install Git
+
     `sudo yum install git`
 
