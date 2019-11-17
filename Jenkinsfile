@@ -14,7 +14,10 @@ node ('master') {
         echo "Run Robotframework Tests"
         try {
            // sh " /var/lib/jenkins/workspace/robot -d Results Tests/Pokemon.robot"
-           sh " /var/lib/jenkins/workspace/pytest --junitxml results.xml Tests"
+            //sh " Tests/test_env_setup.sh"
+            sh " export SAUCE_USERNAME=\"dtranphoto\" "
+            sh " export SAUCE_ACCESS_KEY=\"bd4e1021-fbf7-42cc-8520-f049d3779343\" "
+            sh " /var/lib/jenkins/workspace/pytest --junitxml results.xml Tests"
 
         }
         catch (Exception e) {

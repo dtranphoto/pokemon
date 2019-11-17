@@ -5,8 +5,8 @@ from _pytest.runner import runtestprotocol
 
 @pytest.fixture
 def driver(request):
-    sauce_username = os.environ["dtranphoto"]
-    sauce_access_key = os.environ["bd4e1021-fbf7-42cc-8520-f049d3779343"]
+    sauce_username = os.environ["SAUCE_USERNAME"]
+    sauce_access_key = os.environ["SAUCE_ACCESS_KEY"]
     remote_url = "https://ondemand.saucelabs.com:443/wd/hub"
 
     sauceOptions = {
