@@ -9,13 +9,13 @@
 As a Potential Pokemon SDET, I would like to setup UI Automated testing for the Pokemon.com/US website using Jenkins, Robot Framework, Selenium WebDriver and SauceLabs, in order to verify that there are no bugs on the website.
 
 ### Acceptance Criteria:
-- [x] AWS account with EC2 instance running
+- [x] AWS account with EC2 instance running.
 - [x] Jenkins and RobotFramework installed and configured.
 - [x] Working Jenkinsfile to Checkout, Execute test and Report failures.
 - [x] UI Tests written in Robot Framework.
 - [x] Linked SauceLabs account to executed and record UI Test.
-- [x] Jenkins job to run nightly and email failures
-- [x] Multi-branch Jenkins job to automatically run when new source code is checked in
+- [x] Jenkins job to run nightly and email failures.
+- [x] Multi-branch Jenkins job triggered automatically, using github webhook, when new source code is checked in.
 
 
 ### Definition of Done
