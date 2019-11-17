@@ -9,6 +9,9 @@ def driver(request):
     sauce_access_key = os.environ["SAUCE_ACCESS_KEY"]
     remote_url = "https://ondemand.saucelabs.com:443/wd/hub"
 
+    print "username is"
+    print(sauce_username)
+
     sauceOptions = {
         'screenResolution': '1280x768',
         'seleniumVersion': '3.141.59',
