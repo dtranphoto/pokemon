@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="1" failures="0" hostname="office" name="pytest" skipped="0" tests="1" time="0.168" timestamp="2019-11-17T11:36:13.495612"><testcase classname="Tests.test_basic" file="Tests\test_basic.py" line="44" name="test_should_open_chrome" time="0.000"><error message="test setup failure">request = &lt;SubRequest &apos;driver&apos; for &lt;Function test_should_open_chrome&gt;&gt;
+
+    @pytest.fixture
+    def driver(request):
+&gt;       sauce_username = os.environ[&quot;SAUCE_USERNAME&quot;]
+
+Tests\test_basic.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = environ({&apos;NUMBER_OF_PROCESSORS&apos;: &apos;8&apos;, &apos;COMMONPROGRAMFILES&apos;: &apos;C:\\Program Files (x86)\\Common Files&apos;, &apos;PROCESSOR_ARCHIT...32&apos;: &apos;C:\\Program Files\\Common Files&apos;, &apos;PYTEST_CURRENT_TEST&apos;: &apos;Tests/test_basic.py::test_should_open_chrome (setup)&apos;})
+key = &apos;SAUCE_USERNAME&apos;
+
+    def __getitem__(self, key):
+        try:
+            value = self._data[self.encodekey(key)]
+        except KeyError:
+            # raise KeyError with the original key value
+&gt;           raise KeyError(key) from None
+E           KeyError: &apos;SAUCE_USERNAME&apos;
+
+c:\users\grasshopper\appdata\local\programs\python\python38-32\lib\os.py:673: KeyError</error></testcase></testsuite></testsuites>

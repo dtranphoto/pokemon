@@ -15,8 +15,9 @@ node ('master') {
         try {
            // sh " /var/lib/jenkins/workspace/robot -d Results Tests/Pokemon.robot"
             //sh " Tests/test_env_setup.sh"
-            sh " export SAUCE_USERNAME=\"dtranphoto\" "
-            sh " export SAUCE_ACCESS_KEY=\"bd4e1021-fbf7-42cc-8520-f049d3779343\" "
+            sh " export SAUCE_USERNAME=dtranphoto "
+            sh " export SAUCE_ACCESS_KEY=bd4e1021-fbf7-42cc-8520-f049d3779343 "
+            sh " echo sauce is $SAUCE_USERNAME"
             sh " /var/lib/jenkins/workspace/pytest --junitxml results.xml Tests"
 
         }
