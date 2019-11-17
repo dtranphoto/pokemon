@@ -13,7 +13,8 @@ node ('master') {
     stage('Test'){
         echo "Run Robotframework Tests"
         try {
-            sh " /var/lib/jenkins/workspace/robot -d Results Tests/Pokemon.robot"
+           // sh " /var/lib/jenkins/workspace/robot -d Results Tests/Pokemon.robot"
+           sh " /var/lib/jenkins/workspace/pytest Tests"
         }
         catch (Exception e) {
             testfailed = 1
