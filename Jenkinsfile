@@ -17,16 +17,19 @@ node ('master') {
             //sh " Tests/test_env_setup.sh"
             sh "source /var/lib/jenkins/workspace/test_env_setup.sh"
             sh "echo sauce is $SAUCE_USERNAME"
-            sh " /var/lib/jenkins/workspace/pytest Tests"
+            sh "/var/lib/jenkins/workspace/pytest Tests"
+
             echo "Done with pytest"
 
         }
         catch (Exception e) {
             testfailed = 1
+              echo "Exception with pytest"
         }
         finally{
             //robot outputPath: 'Results', passThreshold: 95.0, unstableThreshold:75.0
-            junit '*.xml'
+            //junit '*.xml'
+              echo "Finally"
         }
 
     }
