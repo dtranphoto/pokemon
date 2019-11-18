@@ -9,22 +9,12 @@ node ('master') {
     stage('Checkout'){
         checkout scm
         echo "Checkout Source files"
-        sh "source /var/lib/jenkins/workspace/test_env_setup.sh"
      }
     stage('Test'){
         echo "Run Robotframework Tests"
         try {
            // sh " /var/lib/jenkins/workspace/robot -d Results Tests/Pokemon.robot"
-            //sh " Tests/test_env_setup.sh"
-
-            echo "Done with source"
-            sh "ls "
-            sh "pwd "
-            sh "echo sauce is $SAUCE_USERNAME"
-            sh "/var/lib/jenkins/workspace/pytest Tests"
-
-            echo "Done with pytest"
-
+            sh "/var/lib/jenkins/workspace/pytest Tests --junitxml report.xml"
         }
         catch (Exception e) {
             testfailed = 1
@@ -32,7 +22,7 @@ node ('master') {
         }
         finally{
             //robot outputPath: 'Results', passThreshold: 95.0, unstableThreshold:75.0
-            //junit '*.xml'
+            junit '*.xml'
               echo "Finally"
         }
 
