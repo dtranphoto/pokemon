@@ -16,8 +16,10 @@ node ('master') {
            // sh " /var/lib/jenkins/workspace/robot -d Results Tests/Pokemon.robot"
             //sh " Tests/test_env_setup.sh"
             sh "source /var/lib/jenkins/workspace/test_env_setup.sh"
+            echo "Done with source"
+            echo "$SAUCE_USERNAME"
             sh "echo sauce is $SAUCE_USERNAME"
-            sh "/var/lib/jenkins/workspace/pytest Tests"
+            //sh "/var/lib/jenkins/workspace/pytest Tests"
 
             echo "Done with pytest"
 
