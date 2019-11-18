@@ -9,7 +9,7 @@ def driver(request):
     sauce_access_key = os.environ["SAUCE_ACCESS_KEY"]
     remote_url = "https://ondemand.saucelabs.com:443/wd/hub"
 
-    print("username is")
+    print("username is for testing")
     print(sauce_username)
 
     sauceOptions = {
@@ -46,4 +46,6 @@ def test_should_open_chrome(driver):
     driver.get("https://www.saucedemo.com")
     actual_title = driver.title
     expected_title = "Swag Labs"
+    print("test inside testing")
+
     assert expected_title == actual_title
