@@ -17,7 +17,8 @@ node ('master') {
             //sh " Tests/test_env_setup.sh"
             sh "source /var/lib/jenkins/workspace/test_env_setup.sh"
             sh "echo sauce is $SAUCE_USERNAME"
-            sh " /var/lib/jenkins/workspace/pytest --junitxml results.xml Tests"
+            sh " /var/lib/jenkins/workspace/pytest Tests"
+            echo "Done with pytest"
 
         }
         catch (Exception e) {
