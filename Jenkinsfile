@@ -9,17 +9,18 @@ node ('master') {
     stage('Checkout'){
         checkout scm
         echo "Checkout Source files"
+        sh "source /var/lib/jenkins/workspace/test_env_setup.sh"
      }
     stage('Test'){
         echo "Run Robotframework Tests"
         try {
            // sh " /var/lib/jenkins/workspace/robot -d Results Tests/Pokemon.robot"
             //sh " Tests/test_env_setup.sh"
-            sh "source /var/lib/jenkins/workspace/test_env_setup.sh"
+
             echo "Done with source"
             sh "ls "
             sh "pwd "
-            //sh "echo sauce is $SAUCE_USERNAME"
+            sh "echo sauce is $SAUCE_USERNAME"
             sh "/var/lib/jenkins/workspace/pytest Tests"
 
             echo "Done with pytest"
