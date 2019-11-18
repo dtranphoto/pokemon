@@ -17,8 +17,7 @@ node ('master') {
             //sh " Tests/test_env_setup.sh"
             sh "source /var/lib/jenkins/workspace/test_env_setup.sh"
             echo "Done with source"
-            echo "$SAUCE_USERNAME"
-            echo "Done with echo"
+
             //sh "echo sauce is $SAUCE_USERNAME"
             sh "/var/lib/jenkins/workspace/pytest Tests"
 
