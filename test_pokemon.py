@@ -16,7 +16,7 @@ def driver(request):
         'screenResolution': '1280x768',
         'seleniumVersion': '3.141.59',
         # best practices involve setting a build number for version control
-        'build': 'Pokenmon test - Python + Pytest',
+        'build': 'Pokemon test - Python + Pytest',
         'name': 'Pokemon UI test',
         'username': sauce_username,
         'accessKey': sauce_access_key,
@@ -53,7 +53,6 @@ def test_open_chrome_check_title(driver):
 #    driver = webdriver.Chrome(executable_path="C:/bin/chromedriver.exe")
 #    driver.get("https:\\www.pokemon.com")
 #    actual_title = driver.title
-#    expected_title = "The Official Pokémon Website | Pokemon.com | Explore the World of Pokémon"
 #
 #    assert expected_title == actual_title
 
