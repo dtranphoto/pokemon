@@ -4,8 +4,8 @@ import pytest
 import os
 from selenium import webdriver
 from _pytest.runner import runtestprotocol
-from Resources import MainPage
-from Resources import PokedexPage
+from Resources.MainPage import MainPage
+from Resources.PokedexPage import PokedexPage
 
 @pytest.fixture
 def driver(request):
@@ -43,12 +43,12 @@ def driver(request):
     browser.quit()
 
 
-def test_open_chrome_check_title(driver):
-    driver.get("https:\\www.pokemon.com")
-    actual_title = driver.title
-    expected_title = "The Official Pok\xe9mon Website | Pokemon.com | Explore the World of Pok\xe9mon"
-
-    assert expected_title == actual_title
+#def test_open_chrome_check_title(driver):
+#    driver.get("https:\\www.pokemon.com")
+#    actual_title = driver.title
+#    expected_title = "The Official Pok\xe9mon Website | Pokemon.com | Explore the World of Pok\xe9mon"
+#
+#    #assert expected_title == actual_title
 
 #def test_local_chrome_check_title():
 #    driver = webdriver.Chrome(executable_path="C:/bin/chromedriver.exe")
@@ -58,4 +58,39 @@ def test_open_chrome_check_title(driver):
 #
 #    assert expected_title == actual_title
 
+def test_main_buttons(driver):
+ #   driver = webdriver.Chrome(executable_path="C:/bin/chromedriver.exe")
+    driver.get("https:\\www.pokemon.com")
+    driver.implicitly_wait(100)
 
+    mainPage = MainPage(driver)
+
+    mainPage.click_pokedex()
+    expected_url = r"https://www.pokemon.com/us/pokedex/"
+    assert expected_url == driver.current_url
+    driver.implicitly_wait(100)
+
+    mainPage.click_video_game()
+    expected_url = r"https://www.pokemon.com/us/pokemon-video-games/"
+    assert expected_url == driver.current_url
+    driver.implicitly_wait(100)
+
+    mainPage.click_tcg()
+    expected_url = r"https://www.pokemon.com/us/pokemon-tcg/"
+    assert expected_url == driver.current_url
+    driver.implicitly_wait(100)
+
+    mainPage.click_tv()
+    expected_url = r"https://www.pokemon.com/us/pokemon-episodes/"
+    assert expected_url == driver.current_url
+    driver.implicitly_wait(100)
+
+    mainPage.click_play()
+    expected_url = r"https://www.pokemon.com/us/play-pokemon/"
+    assert expected_url == driver.current_url
+    driver.implicitly_wait(100)
+
+    mainPage.click_news()
+    expected_url = r"https://www.pokemon.com/us/pokemon-news/"
+    assert expected_url == driver.current_url
+    driver.implicitly_wait(100)
