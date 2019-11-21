@@ -46,7 +46,7 @@ def driver(request):
 def test_open_chrome_check_title(driver):
     driver.get("https:\\www.pokemon.com")
     actual_title = driver.title
-    expected_title = "The Official Pokémon Website | Pokemon.com | Explore the World of Pokémon"
+    expected_title = "The Official Pok\xc3\xa9mon Website | Pokemon.com | Explore the World of Pok\xc3\xa9mon"
 
     assert expected_title == actual_title
 
