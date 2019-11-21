@@ -1,3 +1,5 @@
+# coding=utf-8
+
 import pytest
 import os
 from selenium import webdriver
@@ -44,7 +46,7 @@ def driver(request):
 def test_open_chrome_check_title(driver):
     driver.get("https:\\www.pokemon.com")
     actual_title = driver.title
-    expected_title = "The Official Pokémon Website | Pokemon.com | Explore the World of Pokémon"
+    expected_title = "The Official Pok\xe9mon Website | Pokemon.com | Explore the World of Pok\xe9mon"
 
     assert expected_title == actual_title
 
