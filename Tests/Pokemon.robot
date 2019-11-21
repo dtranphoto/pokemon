@@ -43,7 +43,7 @@ Web GUI Test Search Pokedex for Eevee
     [Documentation]  A simple Pokemon.com test
     [Tags]  Smoke
 #    Open Browser  ${START_URL}  ${BROWSER}
-    Open Browser  ${START_URL}  ${BROWSER}  remote_url=https://dtranphoto:bd4e1021-fbf7-42cc-8520-f049d3779343@ondemand.saucelabs.com:443/wd/hub  desired_capabilities=name:Win 10 + Chrome 70,platform:Windows 10,browserName:chrome,version:70.0
+    Open Browser  ${START_URL}  ${BROWSER}  remote_url=https://dtranphoto:f7e1e00a-6f37-4e78-aea2-64b35ab0fce5@ondemand.saucelabs.com:443/wd/hub  desired_capabilities=name:Win 10 + Chrome 70,platform:Windows 10,browserName:chrome,version:70.0
     Wait Until Page Contains    Home
     Click Link   /us/pokedex/
     Wait Until Page Contains    Name or Number

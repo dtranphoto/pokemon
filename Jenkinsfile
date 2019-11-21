@@ -13,15 +13,16 @@ node ('master') {
     stage('Test'){
         echo "Run Robotframework Tests"
         try {
-            sh " /var/lib/jenkins/workspace/robot -d Results Tests/Pokemon.robot"
+           // sh " /var/lib/jenkins/workspace/robot -d Results Tests/Pokemon.robot"
+            sh "/var/lib/jenkins/workspace/pytest --junitxml report.xml"
         }
         catch (Exception e) {
             testfailed = 1
         }
         finally{
-            robot outputPath: 'Results', passThreshold: 95.0, unstableThreshold:75.0
+            //robot outputPath: 'Results', passThreshold: 95.0, unstableThreshold:75.0
+            junit '*.xml'
         }
-
     }
     stage('Report'){
         //Send Email if test fails"
