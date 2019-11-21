@@ -93,21 +93,6 @@ def test_main_buttons(driver):
     assert expected_url == driver.current_url
     driver.implicitly_wait(100)
 
-    driver.close()
-    driver.quit()
-
-#def test_main_buttons():
-#    driver = webdriver.Chrome(executable_path="C:/bin/chromedriver.exe")
-#    driver.get("https:\\www.pokemon.com")
-#    driver.implicitly_wait(5)
-#    driver.find_element_by_xpath("html / body / nav / div[2] / ul / li[2] / a").click()
-
-#    driver.implicitly_wait(100)
-#    latest_url = driver.current_url
-#    print(latest_url)
-#    expected_url = r"https://www.pokemon.com/us/pokedex/"
-#    assert expected_url == latest_url
-#    driver.implicitly_wait(100)
-#    driver.close()
-#    driver.quit()
+    #driver.close()
+    #driver.quit()
 
