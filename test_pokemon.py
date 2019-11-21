@@ -56,7 +56,7 @@ def test_open_chrome_check_title(driver):
 #
 #    assert expected_title == actual_title
 
-def test_main_buttons(driver):
+def main_buttons(driver):
  #   driver = webdriver.Chrome(executable_path="C:/bin/chromedriver.exe")
     driver.get("https:\\www.pokemon.com")
     driver.implicitly_wait(100)
