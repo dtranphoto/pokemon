@@ -1,4 +1,4 @@
-from Resources.Locators.locators import Locators
+from Resources.locators import Locators
 
 class MainPage():
 

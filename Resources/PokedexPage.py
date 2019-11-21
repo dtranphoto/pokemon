@@ -1,5 +1,3 @@
-from Resources.Locators.locators import Locators
-
 class PokedexPage():
 
     def __init__(self, driver):
