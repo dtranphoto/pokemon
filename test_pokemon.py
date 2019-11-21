@@ -4,8 +4,8 @@ import pytest
 import os
 from selenium import webdriver
 from _pytest.runner import runtestprotocol
-from .Resources.PO.MainPage import MainPage
-from .Resources.PO.PokedexPage import PokedexPage
+from Resources.PO.MainPage import MainPage
+from Resources.PO.PokedexPage import PokedexPage
 
 @pytest.fixture
 def driver(request):
